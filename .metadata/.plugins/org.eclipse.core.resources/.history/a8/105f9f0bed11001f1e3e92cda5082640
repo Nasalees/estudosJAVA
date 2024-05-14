@@ -1,0 +1,14 @@
+package br.com.nathalia;
+
+public class ControleRemoto extends Televisao{
+	
+	public ControleRemoto(int canais, int volume) {
+		super(canais, volume);
+	}
+	
+	public void aumentarVolume(int volume) {
+		System.out.println("Volume atual:  " + getVolume() + "\n Deseja aumentar para quanto? ");
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+package br.com.exercicio01;
+
+public class Programa_01 {
+	public static void main(String[] args) {
+		
+		Pessoa pessoa1 = new Pessoa("Nathalia Sales", 25, 1.70f);
+		
+		Agenda pessoas[] = new Agenda[10];
+		
+		pessoas[0].armazenaPessoa("Nathalia", 25, 1.70f);
+		for(int i = 0; i < pessoas.length; i++) {
+			
+		}
+		
+	}
+}

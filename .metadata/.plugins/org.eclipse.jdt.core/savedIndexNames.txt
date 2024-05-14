@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+C:\Users\nasal\OneDrive\Área de Trabalho\exer_OOP\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4070579458.index
+3352537029.index

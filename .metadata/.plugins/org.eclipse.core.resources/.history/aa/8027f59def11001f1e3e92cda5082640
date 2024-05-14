@@ -1,0 +1,17 @@
+package br.com.nathalia;
+
+public class Programa_03 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void opcoesControle() {
+		System.out.println("=====OPÇÕES DO CONTROLE=====");
+		System.out.println("AUMENTAR");
+		System.out.println("DIMINUIR");
+		System.out.println("AUMENTAR O CANAL");
+		System.out.println("DIMINUIR O CANAL");
+		System.out.println("CONSULTAR CANAL E VOLUME ATUAL");
+	}
+	
+}

@@ -1,0 +1,53 @@
+package br.com.exercicio01;
+
+import java.util.Scanner;
+
+public class Programa_01 {
+	public static void main(String[] args) {
+		menu();
+		
+		
+	}
+	
+	public static void menu() {
+		Agenda agenda = new Agenda();
+		
+		System.out.println("=====MENU=====");
+		System.out.println("1. Armazenar");
+		System.out.println("2. Remover");
+		System.out.println("3. Imprimir lista da agenda");
+		System.out.println("4. Imprimir pessoa da agenda");
+		
+		String nome;
+		
+		Scanner sc = new Scanner(System.in);
+		int opcao = sc.nextInt();
+		switch(opcao) {
+			case 1:
+				System.out.println("Digite o seu nome: ");
+				nome = sc.nextLine();
+				sc.nextLine();
+				
+				System.out.println("Digite o sua idade: ");
+				int idade = sc.nextInt();
+				
+				System.out.println("Digite o altura: ");
+				float altura = sc.nextFloat();
+				
+				agenda.armazenaPessoa(nome, idade, altura);
+				menu();
+				break;
+			case 2:
+				System.out.println("Digite o seu nome: ");
+				nome = sc.nextLine();
+				sc.nextLine();
+				agenda.removePessoa(nome);
+			case 4:
+				agenda.imprimeAgenda();
+				menu();
+				break;
+			case 5:
+				break;
+		}
+	}
+}

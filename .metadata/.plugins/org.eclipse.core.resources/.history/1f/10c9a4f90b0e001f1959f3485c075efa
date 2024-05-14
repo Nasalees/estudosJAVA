@@ -1,0 +1,85 @@
+package br.com.exercicio01;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Agenda implements IAgenda {
+	private int qtdPessoas = 0;
+	private int informacoes[] = new int[10];
+	private int opcao;
+	
+	private List<Pessoa> pessoas;
+
+	public Agenda() {
+		this.pessoas = new ArrayList<>();
+	}
+	
+	/*
+	public void menu() {
+		System.out.println("=====MENU=====");
+		System.out.println("1. Armazenar");
+		System.out.println("2. Remover");
+		System.out.println("3. Imprimir lista da agenda");
+		System.out.println("4. Imprimir pessoa da agenda");
+		opcao = sc.nextInt();
+		switch(opcao) {
+		case 1:
+			
+		}
+	}
+	*/
+
+	//CREATE
+	@Override
+	public void armazenaPessoa(String nome, int idade, float altura) {
+		if (qtdPessoas != 10) {
+			Pessoa pessoa = new Pessoa(nome, idade, altura);
+			
+			qtdPessoas++;
+		} else {
+			System.out.println("A agenda está lotada!");
+		}
+	}
+	
+	//REMOVE
+	@Override
+	public void removePessoa(String nome) {
+		if(qtdPessoas == 0) {
+			System.out.println("Fila está vazia");
+		}else {
+			qtdPessoas--;
+			for(int i = 0; i < qtdPessoas; i++) {
+				informacoes[i] = informacoes[i + 1];
+			}
+		}
+	}
+	
+	@Override
+	public void imprimeAgenda() {
+		
+		for(int i = 0; i < 11; i++) {
+			System.out.println(informacoes[i]);
+		}
+	}
+	
+	@Override
+	public int buscaPessoa(String name) {
+		return 0;
+	}
+
+	@Override
+	public void imprimePessoa(int index) {
+		
+	}
+	
+	//Getters e Setters
+	public void setQtdPessoas(int qtdPessoas) {
+		this.qtdPessoas = qtdPessoas;
+		
+	}
+	
+	public int getQtdPessoa() {
+		return this.qtdPessoas;
+	}
+}

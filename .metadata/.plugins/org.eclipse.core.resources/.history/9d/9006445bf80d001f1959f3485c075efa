@@ -1,0 +1,39 @@
+package br.com.exercicio01;
+
+import java.util.Scanner;
+
+public class Agenda extends Pessoa{
+	private int qtdPessoas;
+	Scanner sc = new Scanner(System.in);
+	public Agenda(String nome, int idade, float altura) {
+		super(nome, idade, altura);
+	}
+	
+	public void adicionarQtdPessoas(int qtdPessoas) {
+		System.out.println("Quantas pessoas você quer agenda?: ");
+		qtdPessoas = sc.nextInt();
+		this.qtdPessoas = qtdPessoas;
+		Agenda pessoas[] = new Agenda[qtdPessoas];
+	}
+	
+	
+	public void ArmazenaPessoa(String nome, int idade, float altura) {
+		super.setNome(nome);
+		super.setIdade(idade);
+		super.setAltura(altura);
+	}
+	
+	public void removerPessoa() {
+		
+	}
+	
+	//Getters e Setters
+	public void setQtdPessoas(int qtdPessoas) {
+		this.qtdPessoas = qtdPessoas;
+		
+	}
+	
+	public int getQtdPessoa() {
+		return this.qtdPessoas;
+	}
+}

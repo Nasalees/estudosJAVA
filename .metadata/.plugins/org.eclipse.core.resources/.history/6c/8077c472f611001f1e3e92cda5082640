@@ -1,0 +1,38 @@
+package br.com.nathalia;
+
+import java.util.Scanner;
+
+public class Programa_03 {
+	
+	public static void main(String[] args) {
+		ControleRemoto controleRemoto = new ControleRemoto();
+		opcoesControle(controleRemoto);
+	}
+	
+	public static void opcoesControle( ControleRemoto controleRemoto) {
+		 Scanner sc = new Scanner(System.in);
+		 int opcoes;
+		 int volume;
+		 
+		 do {
+			 System.out.println("=====OPÇÕES DO CONTROLE=====");
+				System.out.println("1.AUMENTAR VOLUME");
+				System.out.println("2.DIMINUIR VOLUME");
+				System.out.println("3.AUMENTAR O CANAL");
+				System.out.println("4.DIMINUIR O CANAL");
+				System.out.println("5.CONSULTAR CANAL E VOLUME ATUAL");
+				System.out.println("6.SAIR");
+				opcoes = sc.nextInt();
+				
+				switch(opcoes) {
+				case 1:
+					System.out.println("Volume atual: " + controleRemoto.getVolume() + "\nDeseja aumentar para quanto? ");
+					volume = sc.nextInt();
+					controleRemoto.aumentaVolume(volume);
+					
+				}
+				
+		 }while(opcoes != 6);
+			
+		}
+	}

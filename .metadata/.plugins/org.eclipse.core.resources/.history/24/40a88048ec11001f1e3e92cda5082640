@@ -1,0 +1,13 @@
+package br.com.nathalia;
+
+public class Televisao {
+	int canais;
+	
+	public int getCanais() {
+		return this.canais;
+	}
+	
+	public void setCanais(int canais) {
+		this.canais = canais;
+	}
+}

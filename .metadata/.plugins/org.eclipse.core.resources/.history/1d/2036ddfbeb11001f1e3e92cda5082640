@@ -1,0 +1,5 @@
+package br.com.nathalia;
+
+public class Televisao {
+	int canais;
+}

@@ -1,0 +1,41 @@
+package br.com.exercicio01;
+
+import java.util.Scanner;
+
+public class Agenda extends Pessoa{
+	private int qtdPessoas = 0;
+	private int informacoes[] =  new int[10];
+	
+	Scanner sc = new Scanner(System.in);
+	
+	public Agenda(String nome, int idade, float altura) {
+		super(nome, idade, altura);
+	}
+	
+	
+	public void armazenaPessoa(String nome, int idade, float altura) {
+		if(qtdPessoas != 10) {
+			
+			System.out.println("Digite o seu nome: ");
+			super.setNome(nome);
+			super.setIdade(idade);
+			super.setAltura(altura);
+			qtdPessoas++;
+			
+		}else {
+			System.out.println("A agenda está lotada!");
+		}
+		
+	}
+	
+	
+	//Getters e Setters
+	public void setQtdPessoas(int qtdPessoas) {
+		this.qtdPessoas = qtdPessoas;
+		
+	}
+	
+	public int getQtdPessoa() {
+		return this.qtdPessoas;
+	}
+}

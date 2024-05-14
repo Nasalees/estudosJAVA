@@ -1,0 +1,32 @@
+package br.com.nathalia;
+
+import java.util.Scanner;
+
+public class Programa_03 {
+	
+	public static void main(String[] args) {
+		Televisao televisao = new Televisao();
+	}
+	
+	public static void opcoesControle( Televisao televisao) {
+		 Scanner sc = new Scanner(System.in);
+		 int opcoes;
+		 int volume;
+		 
+		System.out.println("=====OPÇÕES DO CONTROLE=====");
+		System.out.println("1.AUMENTAR");
+		System.out.println("2.DIMINUIR");
+		System.out.println("3.AUMENTAR O CANAL");
+		System.out.println("4.DIMINUIR O CANAL");
+		System.out.println("5.CONSULTAR CANAL E VOLUME ATUAL");
+		opcoes = sc.nextInt();
+		
+		switch(opcoes) {
+		case 1:
+			System.out.println("Volume atual:  " + televisao.getVolume() + "\n Deseja aumentar para quanto? ");
+			volume = sc.nextInt();
+			televisao.aumentaVolume(volume);
+		}
+		
+	}
+}

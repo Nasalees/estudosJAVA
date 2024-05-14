@@ -1,0 +1,27 @@
+package br.com.nathalia;
+
+public class Televisao {
+	private int canal;
+	private int volume;
+	
+
+	public int getCanais() {
+		return this.canal;
+	}
+	
+	public void setCanais(int canais) {
+		this.canal = canais;
+	}
+	
+	public int getVolume() {
+		return this.volume;
+	}
+	
+	public void setVolume(int volume) {
+		this.volume = volume;
+		System.out.println("Novo volume " + this.volume);
+	}
+	
+	
+	
+}

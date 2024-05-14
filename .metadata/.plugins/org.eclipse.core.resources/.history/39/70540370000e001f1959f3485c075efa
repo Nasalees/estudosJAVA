@@ -1,0 +1,80 @@
+package br.com.exercicio01;
+
+import java.util.Scanner;
+
+public class Agenda extends Pessoa{
+	private int qtdPessoas = 0;
+	private int informacoes[] =  new int[10];
+	private int opcao;
+	
+	Scanner sc = new Scanner(System.in);
+	
+	public Agenda() {
+		
+	}
+	
+	public Agenda(String nome, int idade, float altura) {
+		super(nome, idade, altura);
+	}
+	
+	public void menu() {
+		System.out.println("=====MENU=====");
+		System.out.println("1. Armazenar");
+		System.out.println("2. Remover");
+		System.out.println("3. Imprimir lista da agenda");
+		System.out.println("4. Imprimir pessoa da agenda");
+		opcao = sc.nextInt();
+		switch(opcao) {
+		case 1:
+			
+		}
+	}
+	//CREATE
+	public void armazenaPessoa(String nome, int idade, float altura) {
+		if(qtdPessoas != 10) {
+			
+			System.out.println("Digite o seu nome: ");
+			super.setNome(nome);
+			System.out.println("Digite sua idade: ");
+			super.setIdade(idade);
+			System.out.println("Digite sua altura: ");
+			super.setAltura(altura);
+			System.out.printf("Pessoa %i foi cafastrada na posição %i", qtdPessoas, informacoes[qtdPessoas]);
+			qtdPessoas++;
+			
+		}else {
+			System.out.println("A agenda está lotada!");
+		}
+		
+	}
+	
+	//REMOVE
+	public void removerPessoa() {
+		if(qtdPessoas == 0) {
+			System.out.println("Fila está vazia");
+		}else {
+			qtdPessoas--;
+			for(int i = 0; i < qtdPessoas; i++) {
+				informacoes[i] = informacoes[i + 1];
+			}
+		}
+	}
+	
+	
+	public void imprimirAgenda() {
+		
+		for(int i = 0; i < 11; i++) {
+			System.out.println(informacoes[i]);
+		}
+	}
+	
+	//Getters e Setters
+	public void setQtdPessoas(int qtdPessoas) {
+		this.qtdPessoas = qtdPessoas;
+		
+	}
+	
+	public int getQtdPessoa() {
+		return this.qtdPessoas;
+	}
+}

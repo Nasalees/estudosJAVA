@@ -1,0 +1,12 @@
+package br.com.exercicio01;
+
+public class Programa_01 {
+	public static void main(String[] args) {
+		
+		Pessoa pessoa1 = new Pessoa("Nathalia Sales", 25, 1.70f);
+		pessoa1.imprimirDadosPessoais();
+		
+		Pessoa pessoas[] = new Pessoa[10];
+		
+	}
+}

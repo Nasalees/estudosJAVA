@@ -1,0 +1,8 @@
+package br.com.nathalia;
+
+public class IControleRemoto {
+	void aumentarVolume(int volume);
+	void diminuirVolume(int volume);
+	void diminuirCanal(int canais);
+	void aumentarCanal(int canais);
+}

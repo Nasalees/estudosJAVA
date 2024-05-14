@@ -1,0 +1,25 @@
+package br.com.nathalia;
+
+import java.util.Scanner;
+
+public class ControleRemoto extends Televisao{
+	Scanner sc = new Scanner(System.in);
+
+	@Override
+	public void setVolume(int volume) {
+		 if(volume > 0 && volume <= 1) {
+			volume += getVolume();
+			setVolume(volume);
+			System.out.println("Novoo volume " + getVolume());
+		}
+	}
+	
+	public void diminuiVolume(int volume) {
+		if(getVolume() == 0 && volume <= 0) {
+			System.out.println("Não é possível fazer essa ação!");
+		}else {
+			volume -= getVolume();
+			setVolume(volume);
+		}
+	}
+}

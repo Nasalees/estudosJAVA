@@ -1,0 +1,17 @@
+package br.com.exercicio01;
+
+public class Agenda extends Pessoa{
+	
+	public Agenda(String nome, int idade, float altura) {
+		super(nome, idade, altura);
+	}
+	public void ArmazenaPessoa(String nome, int idade, float altura) {
+		super.setNome(nome);
+		super.setIdade(idade);
+		super.setAltura(altura);
+	}
+	
+	public void removerPessoa() {
+		
+	}
+}

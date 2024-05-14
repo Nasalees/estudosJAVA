@@ -1,0 +1,13 @@
+package br.com.exercicio01;
+
+public class Programa_01 {
+	public static void main(String[] args) {
+		
+		Agenda pessoas[] = new Agenda[10];
+		
+		
+		
+	
+		
+	}
+}

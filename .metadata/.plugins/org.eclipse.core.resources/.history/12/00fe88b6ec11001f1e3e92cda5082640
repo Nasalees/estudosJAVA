@@ -1,0 +1,10 @@
+package br.com.nathalia;
+
+public class ControleRemoto extends Televisao{
+	
+	public ControleRemoto(int canais, int volume) {
+		super(canais, volume);
+	}
+	
+	public 
+}
