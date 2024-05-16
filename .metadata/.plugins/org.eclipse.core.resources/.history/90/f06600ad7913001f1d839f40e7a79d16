@@ -1,0 +1,27 @@
+package br.com.nathalia.exercicio03;
+
+public class Elevador {
+	private int totalDeAndares;
+	private int andarAtual = 0;
+	private int capacidadeDoElevador;
+	private int qtPessoasNoElevador;
+	
+	public void Elevador(int totalDeAndares, int andarAtual,int capacidadeDoElevador, int qtPessoasNoElevador) {
+		this.totalDeAndares = totalDeAndares;
+		this.andarAtual = andarAtual;
+		this.capacidadeDoElevador = capacidadeDoElevador;
+		this.qtPessoasNoElevador = qtPessoasNoElevador;
+	}
+	
+	public void inicializa(int capacidadeDoElevador, int totalDeAndares ) {
+		if(totalDeAndares == 0 && capacidadeDoElevador == 0) {
+			
+		}
+	}
+	
+	public void entra() {
+		if(capacidadeDoElevador == 10) {
+			System.out.println("Elevador em sua capacidade máxima!");
+		}
+	}
+}
